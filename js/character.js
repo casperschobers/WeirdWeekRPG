@@ -20,7 +20,7 @@ function Character(name, x, y, dir, movetype, message) {
 
     // images are class property
     Character.images = new Object();
-    var names = ["player", "king", "minister", "soldier"];
+    var names = ["player2", "king2", "minister", "soldier"];
     for (var i = 0; i < names.length; i++) {
         Character.images[names[i]] = new Image();
         Character.images[names[i]].src = "images/" + names[i] + ".png";

@@ -1,3 +1,8 @@
+@font-face{
+	font-family: pokemon;
+    src: url(../fonts/Pokemon.ttf);
+}
+
 canvas{
 	padding-left: 0;
     padding-right: 0;
@@ -22,4 +27,5 @@ html{
 	border-radius: 25px;
 	color: #000;
 	visibility: hidden;
+	font-family: pokemon;
 }

@@ -27,7 +27,7 @@ function DisplayPropertyNames(obj) {
             if(current < contentArray.length) {
                 elem.text(elem.text() + contentArray[current++]);
             }
-        }, 300);
+        }, 125);
     };
     
 })(jQuery);

@@ -7,7 +7,7 @@ window.onload = function() {
     // initialize global objects
     activeKey = null;
     map = new Map("test");
-    player = new Player("player", 1, 1, DOWN);
+    player = new Player("player2", 1, 1, DOWN);
     map.addChara(player);
 
     // start mainloop
