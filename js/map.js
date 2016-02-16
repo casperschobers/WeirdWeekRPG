@@ -14,7 +14,7 @@ function Map(name) {
     }
     Map.images[0].src = "images/metal.png";
     Map.images[1].src = "images/black.png";
-    Map.images[2].src = "images/forest.png";
+    Map.images[2].src = "images/danger.png";
     Map.images[3].src = "images/hill.png";
     Map.images[4].src = "images/metalbox.png";
     Map.images[5].src = "images/light.png";
