@@ -7,5 +7,19 @@ canvas{
 }
 
 html{
-	/*background-color: #000;*/
+	background-color: #000;
+	color: #fff;
+}
+
+#text{
+	height: 50px;
+	width: 580px;
+	padding: 30px;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	background-color: #fff;
+	border-radius: 25px;
+	color: #000;
+	visibility: hidden;
 }

@@ -4,7 +4,8 @@ function Map(name) {
     this.col = -1;
     this.defaultTile = 0;
     this.data = null;
-    this.charas = [];  // characters on this map
+    this.charas = [];
+    this.first = true;  // characters on this map
 
     // images are class property
     Map.images = new Array(256);
@@ -17,6 +18,8 @@ function Map(name) {
     Map.images[3].src = "images/hill.png";
     Map.images[4].src = "images/metalbox.png";
     Map.images[5].src = "images/light.png";
+    Map.images[6].src = "images/gate.png";
+    Map.images[7].src = "images/platedmetal.png";
 
     // load map data
     this.load("map/" + name + ".map");
@@ -104,13 +107,19 @@ Map.prototype.isMovable = function(x, y) {
         return false;
     }
     // cannot move at sea(1) and mountan(4) tile
-    if (this.data[y][x] == 1 || this.data[y][x] == 4) {
+    if (this.data[y][x] == 1 || this.data[y][x] == 4 || this.data[y][x] == 6 || this.data[y][x] == 7) {
         return false;
     }
 
     // cannot move to character cell
     for (var i = 0; i < this.charas.length; i++) {
         if (this.charas[i].x == x && this.charas[i].y == y) {
+            
+            if(this.first){
+                $('#text').css("visibility", "visible");
+                $('#text').writeText("this is some test text");
+                this.first = false;
+            }
             return false;
         }
     }
