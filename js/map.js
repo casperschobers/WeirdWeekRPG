@@ -11,11 +11,12 @@ function Map(name) {
     for (var i = 0; i < 256; i++) {
         Map.images[i] = new Image();
     }
-    Map.images[0].src = "images/grass.png";
-    Map.images[1].src = "images/metal.png";
+    Map.images[0].src = "images/metal.png";
+    Map.images[1].src = "images/black.png";
     Map.images[2].src = "images/forest.png";
     Map.images[3].src = "images/hill.png";
-    Map.images[4].src = "images/mountain.png";
+    Map.images[4].src = "images/metalbox.png";
+    Map.images[5].src = "images/light.png";
 
     // load map data
     this.load("map/" + name + ".map");
