@@ -130,7 +130,70 @@ Map.prototype.isMovable = function(x, y) {
             
             if(this.first){
                 $('#text').css("visibility", "visible");
-                $('#text').writeText("this is some test text");
+                //$('#text').writeText("TANK: The last human city. The only place we have left. &nbsp;&nbsp;&nbsp; NEO: Where is it?");
+                $("#text").lbyl({
+                    content: "TANK: The last human city. The only place we have left.",
+                    speed: 100,
+                    type: 'show',
+                    fadeSpeed: 10000, // Only relevant when the 'type' is set to 'fade'
+                    finished: function(){ 
+                        $("#text").lbyl({
+                            content: "NEO: Where is it?",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 10000, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){  $("#text").lbyl({
+                            content: "TANK: Deep underground, near the earth's core where it's still warm. Live long enough you might even see it.",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){  $("#text").lbyl({
+                            content: "God-damn, I...I got to tell you, I'm fairly excited to see what you're capable of,",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){  $("#text").lbyl({
+                            content: "if Morpheus is right and all...I'm not supposed to talk about this,",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){   $("#text").lbyl({
+                            content: "but if you are...a very exciting time. ",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){  $("#text").lbyl({
+                            content: "We got a lot to do. We got to get to it.... Now, we're supposed to start with these operation programs first,",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){ $("#text").lbyl({
+                            content: "that's a major boring shit. Let's do something more fun. How about combat training.",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){   $("#text").lbyl({
+                            content: "Go and find the TM42 to learn jiu jitsu",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){$("#text").lbyl({
+                            content: "NEO: Jujitsu? I'm going to learn Jujitsu?... Holy shit.",
+                            speed: 100,
+                            type: 'show',
+                            fadeSpeed: 500, // Only relevant when the 'type' is set to 'fade'
+                            finished: function(){  } // Finished Callback
+                        });  } // Finished Callback
+                        }); } // Finished Callback
+                        });   } // Finished Callback
+                        });  } // Finished Callback
+                        }); } // Finished Callback
+                        });  } // Finished Callback
+                        });  } // Finished Callback
+                        });  } // Finished Callback
+                        }); 
+                } // Finished Callback
+                });
                 this.first = false;
             }
             return false;
@@ -138,6 +201,7 @@ Map.prototype.isMovable = function(x, y) {
     }
 
     return true;
+
 }
 
 Map.prototype.addChara = function(chara) {

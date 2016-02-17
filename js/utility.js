@@ -28,6 +28,7 @@ function DisplayPropertyNames(obj) {
                 elem.text(elem.text() + contentArray[current++]);
             }
         }, 125);
+        console.log("done");
     };
     
 })(jQuery);
