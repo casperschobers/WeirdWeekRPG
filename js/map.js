@@ -20,6 +20,7 @@ function Map(name) {
     Map.images[5].src = "images/light.png";
     Map.images[6].src = "images/gate.png";
     Map.images[7].src = "images/platedmetal.png";
+    Map.images[8].src = "images/disk.png";
 
     // load map data
     this.load("map/" + name + ".map");
@@ -109,6 +110,18 @@ Map.prototype.isMovable = function(x, y) {
     // cannot move at sea(1) and mountan(4) tile
     if (this.data[y][x] == 1 || this.data[y][x] == 4 || this.data[y][x] == 6 || this.data[y][x] == 7) {
         return false;
+    }
+
+    if(this.data[y][x] == 8){
+
+        this.data[y][x] = 0;
+        $('#text').html("");
+        $('#text').writeText("You have obtained TM42 (jiu jitsu)!!!!");
+    }
+
+    if(this.data[y][x] == 5){
+        $('#text').html("");
+        $('#text').writeText("Downloading.........................."); 
     }
 
     // cannot move to character cell
